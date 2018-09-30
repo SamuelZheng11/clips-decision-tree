@@ -1,3 +1,10 @@
+; all functions and defs were modified and assisted by notes and lectures menstioned below
+; Modified from tutorial recording 8 Douglas, G. (2018). Introduction to CLIPS. retrieved from https://mediastore.auckland.ac.nz/2018/1185/COMPSCI367T01C/1023055/c23eca/201809281400.LT347637.preview
+; Additional resource used and modified from tutorial 8 slides Douglas, G. (2018). Introduction to CLIPS. retrieved from https://canvas.auckland.ac.nz/courses/29972/files/folder/Tutorials?preview=2512832
+; Additional documentation used Giarratano, J, C. CLIPS 6.4 User’s Guide, retrieved from http://clipsrules.sourceforge.net/documentation/v640/ug.pdf
+; author: Samuel Zheng, UPI: szhe560; UUID: 634715579
+; date: 1/10/18
+
 (deftemplate start-status "Store the variable that the user answers with when trying to start their engine"
    (slot value (type INTEGER) (range 0 2))
 )
@@ -31,8 +38,6 @@
 )
 
 ; Entry node(s) 
-; Modified from tutorial recording 8 Douglas, G. (2018). Introduction to CLIPS. retrieved from https://mediastore.auckland.ac.nz/2018/1185/COMPSCI367T01C/1023055/c23eca/201809281400.LT347637.preview
-; Additional resource used and modified from tutorial 8 slides Douglas, G. (2018). Introduction to CLIPS. retrieved from https://canvas.auckland.ac.nz/courses/29972/files/folder/Tutorials?preview=2512832
 (defrule start-motorcycle =>
 	(printout t "Did you attempt to start the motorcycle after turning the ignition to on using the ignition switch or kick-starter? 1=switch 2=kick-starter" crlf)
 	(bind ?response (read))
